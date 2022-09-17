@@ -1,5 +1,5 @@
 function readingsOutsideRange(station, range) {
-  return station.readings.filter(r => r.temp < range.min || r.temp > range.max);
+  return station.readings.filter(r => !range.contains(r.temp));
 }
 
 module.exports = readingsOutsideRange;
