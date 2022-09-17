@@ -10,6 +10,10 @@ class NumberRange {
   get max() {
     return this._data.max;
   }
+
+  contains(n) {
+    return n >= this.min && n <= this.max;
+  }
 }
 
 module.exports = { NumberRange };
