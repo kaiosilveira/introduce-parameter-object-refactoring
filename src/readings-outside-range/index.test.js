@@ -15,7 +15,7 @@ describe('readingsOutsideRange', () => {
       ],
     };
 
-    const results = readingsOutsideRange(station, min, range);
+    const results = readingsOutsideRange(station, range);
 
     expect(results).toHaveLength(2);
     expect(results.some(r => r.temp === 9)).toBeTruthy();

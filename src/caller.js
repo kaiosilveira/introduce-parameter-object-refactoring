@@ -4,6 +4,6 @@ const readingsOutsideRange = require('./readings-outside-range');
 
 const operatingPlan = { temperatureFloor: 50, temperatureCeiling: 55 };
 const range = new NumberRange(operatingPlan.temperatureFloor, operatingPlan.temperatureCeiling);
-const alerts = readingsOutsideRange(station, operatingPlan.temperatureFloor, range);
+const alerts = readingsOutsideRange(station, range);
 
 console.log(alerts);
